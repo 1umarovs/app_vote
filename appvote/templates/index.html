@@ -46,6 +46,8 @@
                                 <input id="file-upload" type="file" accept="image/*" multiple>
                             </div>
 
+                            {% if not user.is_authenticated %}
+
                             <div class="card-in-card">
                                 <div class="mb-3">
                                     <label for="Name" class="form-label">Name*</label>
@@ -56,8 +58,9 @@
                                     <input type="text" class="form-control" placeholder="Your email adress" id="name">
                                 </div>
                             </div>
+                            {% endif %}
 
-                            <button type="submit" class="btn btn-primary my-3">Submit</button>
+                            <button type="submit" class="btn btn-dark my-3">Submit</button>
 
                         </form>
 

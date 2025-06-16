@@ -25,6 +25,12 @@ body{
 }
 
 
+.btn-outline-dark:hover {
+    background-color: #F0F0F0;
+    color: black;
+}
+
+
 
 .cards{
     tab-size: 4;
