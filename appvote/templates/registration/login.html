@@ -1,0 +1,103 @@
+{% load static %}
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<link
+  rel="shortcut icon"
+  href="{% static 'image/logo.jpg' %}"
+  type="image/x-icon"
+/>
+
+<section class="register">
+  <div class="form-container cards mx-auto">
+    <div class="head text-center">
+      <img src="{% static 'image/logo.jpg' %}" class="img-fluid" alt="Icon" />
+      <h2>Blogimizga qo'shiling</h2>
+      <small>Foydalanuvchi uchun a'zo bo'ling</small>
+    </div>
+    <form method="post">
+      {% csrf_token %}
+      {% if error %}
+        <div class="alert alert-danger text-center">
+          {{ error }}
+        </div>
+      {% endif %}
+      <div class="mb-3 text-start">
+        <label for="username" class="form-label">Username *</label>
+        <input type="text" class="form-control" id="username" name="username" required />
+      </div>
+
+      <div class="mb-3 text-start">
+        <label for="password1" class="form-label">Parol (min 8 ta belgi)*</label>
+        <input type="password" class="form-control" id="password1" name="password1" placeholder="Parolingiz" required />
+      </div>
+      <button type="submit" class="btn btn-outline-dark w-100">
+        kirish
+      </button>
+    </form>
+    <small class="d-block mt-3 text-center">
+       Profilingiz mavjud emasmi ?
+      <a href="{% url 'users:signup' %}" class="text-link">Ro'yhatdan o'tish</a>
+    </small>
+  </div>
+</section>
+
+<style>
+  body {
+    margin: 0;
+    background-color: #f9fafb;
+    font-family: Inter var, sans-serif;
+  }
+
+  .register {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+
+  .cards {
+    width: 100%;
+    max-width: 520px;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .form-container img {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .form-container small {
+    color: #6c757d;
+  }
+
+  .text-link {
+    color: #198754 !important;
+    text-decoration: none;
+  }
+
+  .text-link:hover {
+    text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .cards {
+      margin: 0 0;
+      padding: 1.5rem 1rem;
+      box-shadow: none;
+      max-width: 720px;
+    }
+  }
+</style>
