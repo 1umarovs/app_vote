@@ -2,6 +2,12 @@
 {% load static %}
 {% block content %}
 
+
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
     <!-- form and discuss section -->
 
 
@@ -25,17 +31,24 @@
                         <p>Help us fix issues</p>
 
 
-                        <form>
-
+                        <form method="post">
+                            {% csrf_token %}
                             <div class="mb-3">
                                 <label for="title" class="form-label" id="label">title</label>
-                                <input type="text" class="form-control" placeholder="Describe the bug" id="title">
+                                <input type="text" class="form-control" name= "discuss" placeholder="Describe the bug" id="title" required>
                             </div>
+
+                            <select class="form-select my-3" name="category" aria-label="Default select example" required>
+                                <option selected>Open this select menu</option>
+                                {% for category in categories %}
+                                    <option value="{{ category.id }}">{{ category.name }}</option>
+                                {% endfor %}
+                            </select>
 
                             <div class="mb-3">
                                 <label for="desp" class="form-label">Description</label>
-                                <textarea name="" id="" rows="5" class="form-control"
-                                    placeholder="What steps reproduce the issue?" id="desp"></textarea>
+                                <textarea name="content" id="" rows="5"  class="form-control"
+                                    placeholder="What steps reproduce the issue?" id="desp" required></textarea>
                             </div>
 
                             <div class="custom-file-upload mb-3">
@@ -43,7 +56,7 @@
                                     <i class="fas fa-paperclip"></i>
                                     Attach Images
                                 </label>
-                                <input id="file-upload" type="file" accept="image/*" multiple>
+                                <input id="file-upload" type="file" accept="image/*" name="image" multiple>
                             </div>
 
                             {% if not user.is_authenticated %}
@@ -51,11 +64,11 @@
                             <div class="card-in-card">
                                 <div class="mb-3">
                                     <label for="Name" class="form-label">Name*</label>
-                                    <input type="text" class="form-control" placeholder="Your Name" id="name">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" id="name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="Email" class="form-label">Email*</label>
-                                    <input type="text" class="form-control" placeholder="Your email adress" id="name">
+                                    <input type="text" name="email" class="form-control" placeholder="Your email adress" id="email">
                                 </div>
                             </div>
                             {% endif %}
@@ -147,7 +160,7 @@
                         <div class="lists w-100">
 
 
-
+                            {% for discuss in discussions %}
                             <div class="list d-flex">
 
                                 <div class="vote-btn d-flex flex-column m-0 p-3 btn">
@@ -158,14 +171,19 @@
                                 <div class="content">
                                     <a href="./detail.html" class="link">
                                     <div class="desp-body p-3">
-                                        <a href="./detail.html" class="text-decoration-none"><h5 class="desp-title">Users work</h5></a>
-                                        <p class="desp">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
+                                        <a href="./detail.html" class="text-decoration-none"><h5 class="desp-title">{{discuss.title}}</h5></a>
+                                        <p class="desp">{{discuss.content}}</p>
                                     </div>
 
                                     <div class="user-profile p-3 d-flex gap-3">
                                         <i class="fas fa-user"></i>
-                                        <p>Abdurakhman</p>
+                                        <p>
+                                            {% if discuss.author %}
+                                                {{ discuss.author.username }}
+                                            {% else %}
+                                                {{ discuss.author2 }}
+                                            {% endif %}
+                                        </p>
 
                                         <p><i class="fas fa-bug"></i> Bug Reports </p>
 
@@ -175,118 +193,8 @@
                                 </div>
 
                             </div>
+                            {% endfor %}
 
-                            <div class="list d-flex">
-
-                                <div class="vote-btn d-flex flex-column m-0 p-3 btn">
-                                    <i class="fas fa-caret-up" role="button"></i>
-                                    <h3 class="counter">0</h3>
-                                </div>
-
-                                <div class="content">
-
-                                    <div class="desp-body p-3">
-                                        <a href="./detail.html" class="text-decoration-none"><h5 class="desp-title">Users work</h5></a>
-                                        <p class="desp">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-
-                                    <div class="user-profile p-3 d-flex gap-3">
-                                        <i class="fas fa-user"></i>
-                                        <p>Abdurakhman</p>
-
-                                        <p><i class="fas fa-bug"></i> Bug Reports </p>
-
-                                        <p><i class="far fa-comments"></i> 2 </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="list d-flex">
-
-                                <div class="vote-btn d-flex flex-column m-0 p-3 btn">
-                                    <i class="fas fa-caret-up" role="button"></i>
-                                    <h3 class="counter">0</h3>
-                                </div>
-
-                                <div class="content">
-
-                                    <div class="desp-body p-3">
-                                        <a href="./detail.html" class="text-decoration-none"><h5 class="desp-title">Users work</h5></a>
-                                        <p class="desp">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-
-                                    <div class="user-profile p-3 d-flex gap-3">
-                                        <i class="fas fa-user"></i>
-                                        <p>Abdurakhman</p>
-
-                                        <p><i class="fas fa-bug"></i> Bug Reports </p>
-
-                                        <p><i class="far fa-comments"></i> 2 </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            
-                            <div class="list d-flex">
-
-                                <div class="vote-btn d-flex flex-column m-0 p-3 btn">
-                                    <i class="fas fa-caret-up" role="button"></i>
-                                    <h3 class="counter">0</h3>
-                                </div>
-
-                                <div class="content">
-
-                                    <div class="desp-body p-3">
-                                        <a href="./detail.html" class="text-decoration-none"><h5 class="desp-title">Users work</h5></a>
-                                        <p class="desp">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-
-                                    <div class="user-profile p-3 d-flex gap-3">
-                                        <i class="fas fa-user"></i>
-                                        <p>Abdurakhman</p>
-
-                                        <p><i class="fas fa-bug"></i> Bug Reports </p>
-
-                                        <p><i class="far fa-comments"></i> 2 </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="list d-flex">
-
-                                <div class="vote-btn d-flex flex-column m-0 p-3 btn">
-                                    <i class="fas fa-caret-up" role="button"></i>
-                                    <h3 class="counter">0</h3>
-                                </div>
-
-                                <div class="content">
-
-                                    <div class="desp-body p-3">
-                                        <a href="./detail.html" class="text-decoration-none"><h5 class="desp-title">Users work</h5></a>
-                                        <p class="desp">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-
-                                    <div class="user-profile p-3 d-flex gap-3">
-                                        <i class="fas fa-user"></i>
-                                        <p>Abdurakhman</p>
-
-                                        <p><i class="fas fa-bug"></i> Bug Reports </p>
-
-                                        <p><i class="far fa-comments"></i> 2 </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
 
 
                         </div>
