@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %}Discussion Detail{% endblock %}
+{% block content %}
+    <!-- post and forms section -->
+
+
+    
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+
+    <section class="py-5  ">
+        <div class="container">
+            <div class="row">
+
+
+
+                <div class="col-sm-12 col-md-12 col-lg-10">
+
+
+                    <!-- start post -->
+
+
+                    <div class="cards post my-3">
+                        <!-- counter btn -->
+
+                        <form class="vote-form d-flex flex-column justify-content-center" method="post" action="{% url 'main:toggle_vote' discussion.id %}">
+                            {% csrf_token %}
+                        <button class="vote-btn vote-detail d-flex flex-column m-0 p-3 btn" style="height: 50%;">
+                            {% if discussion.id in voted_set %}
+                                <i class="fas fa-caret-up text-info"></i>
+                                <h3 class="counter text-info">{{ discussion.vote_count }}</h3>
+                            {% else %}
+                                <i class="fas fa-caret-up"></i>
+                                <h3 class="counter">{{ discussion.vote_count }}</h3>
+                            {% endif %}
+                        </button>
+                        <!-- end counter -->
+
+                        </form>
+
+
+                                    
+                                </button>
+                            </form>
+
+
+                        <!-- post body -->
+
+                        <div class="post-body p-3">
+                            <h2 class="post-title">{{discussion.title}}</h2>
+                            <p class="post-description">
+                                {{discussion.content}}
+                            </p>
+
+                            <div class="user-profile pt-5 d-flex gap-3">
+                                <i class="fas fa-user"></i>
+                                <p>
+                                    {% if discussion.author %}
+                                        {{ discussion.author.username }}
+                                    {% else %}
+                                        {{ discussion.author2 }}
+                                    {% endif %}
+                                </p>
+                                <p>{{ discussion.created_at|naturaltime }} </p>
+                                <p><i class="far fa-comments"></i> {{ discussion.discussions_comments_count }} </p>
+                            </div>
+
+                        </div>
+
+                        <!-- end post body -->
+
+
+
+                    </div>
+                    <!-- end post -->
+
+                    <div class="cards forms">
+
+                        <!-- start forms -->
+                        <form class="card-in-card" method="post">
+                            {% csrf_token %}
+                            <textarea class="form-control my-3" rows="5"
+                                placeholder="What do you think?" name="content"></textarea>
+                            {% if not user.is_authenticated %}
+                            <div class="d-flex gap-1">
+                                <input type="text" class="form-control my-3" placeholder="Name" name="name">
+                                <input type="email" class="form-control my-3" placeholder="Email" name="email">
+                            </div>
+                            {% endif %}
+
+
+                            <div class="d-flex justify-content-between py-3">
+                            <div class="form-check">
+                                <!-- checkbox -->
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label py-2" for="exampleCheck1">I agree with Privacy Policy and Terms
+                                and Conditions</label>
+                            </div>
+                                <button type="submit" class="btn btn-dark ">Submit</button>
+
+                            </div>
+                        </form>
+                        <!-- end forms -->
+
+                        <br>
+
+                        <!-- comment part -->
+                        <div class="comment-part">
+                            {% if comments %}
+                            {% for comment in comments %}
+                            <div class="comment-box py-3 px-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="comment-author fs-6"><i class="fas fa-user"></i> {% if comment.author %}{{ comment.author.username }}{% else %}{{ comment.author2 }}{% endif %}</span>
+                                    <span class="comment-time fs-6">in {{ comment.created_at|naturaltime }}</span>
+                                </div>
+                                <div class="comment-text px-4 py-3">{{ comment.content }}</div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            {% endif %}
+
+                            <br>
+
+                            <!-- end comment -->
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}

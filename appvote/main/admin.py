@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import category, discussion
+from .models import category, discussion, comment
 
 @admin.register(category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -14,3 +14,8 @@ class DiscussionAdmin(admin.ModelAdmin):
     def author(self, obj):
         return obj.author.username if obj.author else obj.author2
     author.short_description = 'Author'
+
+@admin.register(comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('discussion', 'author', 'created_at')
+    list_filter = ('discussion', 'author')
