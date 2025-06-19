@@ -34,7 +34,7 @@
                         <p>Help us fix issues</p>
 
 
-                        <form method="post">
+                        <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             <div class="mb-3">
                                 <label for="title" class="form-label" id="label">title</label>

@@ -10,23 +10,23 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-from pathlib import Path
 import os
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+from pathlib import Path
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Debug rejimini avtomatik sozlash (default: True)
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
+# Secret key — productionda Railway dagi env dan olinadi
+SECRET_KEY = os.environ.get('SECRET_KEY', 'your-dev-secret-key')
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7r0iw*t8*4o@sp257*ok!v8bq=#h(+kimi1el=)#o^+ta@a)qw'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS sozlamasi — railway va local uchun farq qiladi
+if DEBUG:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+else:
+    ALLOWED_HOSTS = [os.environ.get('RAILWAY_HOST', 'appvote.up.railway.app')]
+    # yoki xavfsiz test uchun ['*']
 
 # Application definition
 
