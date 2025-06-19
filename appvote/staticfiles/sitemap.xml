@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://appvote.up.railway.app/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/users/login/?next=/roadmap/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/users/signup/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/users/login/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/?filter=most_discussed</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/?filter=most_votes</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/?filter=recent</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/done/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/in-progress/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-done/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-set/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/planned/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/need-your-opinion/</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/?filter=recent&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/?filter=most_discussed&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/?filter=most_votes&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/done/?filter=most_discussed</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/done/?filter=most_votes</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/done/?filter=recent</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/done/?filter=recent&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/in-progress/?filter=most_discussed</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/in-progress/?filter=most_votes</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/in-progress/?filter=recent</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/in-progress/?filter=recent&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-done/?filter=most_discussed</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-done/?filter=most_votes</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-done/?filter=recent</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-done/?filter=recent&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-set/?filter=most_discussed</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-set/?filter=most_votes</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-set/?filter=recent</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-set/?filter=recent&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/planned/?filter=most_discussed</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/planned/?filter=most_votes</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/planned/?filter=recent</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/planned/?filter=recent&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/need-your-opinion/?filter=most_discussed</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/need-your-opinion/?filter=most_votes</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/need-your-opinion/?filter=recent</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/need-your-opinion/?filter=recent&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/done/?filter=most_discussed&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/done/?filter=most_votes&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/in-progress/?filter=most_discussed&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/in-progress/?filter=most_votes&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-done/?filter=most_discussed&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-done/?filter=most_votes&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-set/?filter=most_discussed&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/not-set/?filter=most_votes&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/planned/?filter=most_discussed&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/planned/?filter=most_votes&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/need-your-opinion/?filter=most_discussed&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://appvote.up.railway.app/category/need-your-opinion/?filter=most_votes&amp;extra_filter=</loc>
+  <lastmod>2025-06-19T17:27:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
