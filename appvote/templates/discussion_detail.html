@@ -25,30 +25,30 @@
                     <!-- start post -->
 
 
-                    <div class="cards post my-3">
+                    <div class="cards row post my-3">
                         <!-- counter btn -->
 
-                        <form class="vote-form d-flex flex-column justify-content-center" method="post" action="{% url 'main:toggle_vote' discussion.id %}">
+                        <div class="col-sm-12 col-md-1 ">
+                        <form class="vote-form d-flex flex-column align-items-start" action="{% url 'main:toggle_vote' discussion.id %}">
                             {% csrf_token %}
-                        <button class="vote-btn vote-detail d-flex flex-column m-0 p-3 btn" style="height: 50%;">
-                            {% if discussion.id in voted_set %}
-                                <i class="fas fa-caret-up text-info"></i>
-                                <h3 class="counter text-info">{{ discussion.vote_count }}</h3>
-                            {% else %}
-                                <i class="fas fa-caret-up"></i>
-                                <h3 class="counter">{{ discussion.vote_count }}</h3>
-                            {% endif %}
-                        </button>
+                            <button type="submit" class="vote-btn vote-detail d-flex flex-column m-0 p-3 btn w-100 h-100">
+                                {% if discussion.id in voted_set %}
+                                    <i class="fas fa-caret-up text-info"></i>
+                                    <h3 class="counter text-info">{{ discussion.vote_count }}</h3>
+                                {% else %}
+                                    <i class="fas fa-caret-up"></i>
+                                    <h3 class="counter">{{ discussion.vote_count }}</h3>
+                                {% endif %}
+                            </button>
                         <!-- end counter -->
 
                         </form>
-
+                        </div>
 
                                     
-                                </button>
-                            </form>
 
 
+                        <div class="col-sm-12 col-md-11 ">
                         <!-- post body -->
 
                         <div class="post-body p-3">
@@ -66,14 +66,22 @@
                                         {{ discussion.author2 }}
                                     {% endif %}
                                 </p>
-                                <p>{{ discussion.created_at|naturaltime }} </p>
+                                <p> <i class="far fa-clock"></i> {{ discussion.created_at|naturaltime }} </p>
                                 <p><i class="far fa-comments"></i> {{ discussion.discussions_comments_count }} </p>
                             </div>
+                            <div class="post-img pt-3">
+                                {% if discussion.img %}
+                                    <img src="{{ discussion.img.url }}" alt="Post Image" class="img-fluid object-fit-contain">
+                                {% else %}
+                                    <p>No image available</p>
+                                {% endif %}
+                            </div>
+
 
                         </div>
 
                         <!-- end post body -->
-
+                        </div>
 
 
                     </div>
@@ -88,8 +96,8 @@
                                 placeholder="What do you think?" name="content"></textarea>
                             {% if not user.is_authenticated %}
                             <div class="d-flex gap-1">
-                                <input type="text" class="form-control my-3" placeholder="Name" name="name">
-                                <input type="email" class="form-control my-3" placeholder="Email" name="email">
+                                <input type="text" class="form-control my-3" placeholder="Name" name="name" required autofocus minlength="3" maxlength="20">
+                                <input type="email" class="form-control my-3" placeholder="Email" name="email" required >
                             </div>
                             {% endif %}
 
@@ -97,7 +105,7 @@
                             <div class="d-flex justify-content-between py-3">
                             <div class="form-check">
                                 <!-- checkbox -->
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1"  name="agree" required>
                             <label class="form-check-label py-2" for="exampleCheck1">I agree with Privacy Policy and Terms
                                 and Conditions</label>
                             </div>
@@ -147,6 +155,12 @@
         </div>
     </section>
 
-
+<style>
+    @media only screen and (min-width: 280px) and (max-width: 599px) {
+    .vote-btn{
+        width: 25%!important;
+    }
+}
+</style>
 
 {% endblock %}

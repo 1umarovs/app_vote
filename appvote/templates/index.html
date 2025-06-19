@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}Bug reports{% endblock %}
 {% block content %}
+
+{% load humanize %}
 
 
     <script>
@@ -64,11 +67,11 @@
                             <div class="card-in-card">
                                 <div class="mb-3">
                                     <label for="Name" class="form-label">Name*</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" id="name">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" id="name" required minlength="3" maxlength="20">
                                 </div>
                                 <div class="mb-3">
                                     <label for="Email" class="form-label">Email*</label>
-                                    <input type="text" name="email" class="form-control" placeholder="Your email adress" id="email">
+                                    <input type="text" name="email" class="form-control" placeholder="Your email adress" id="email" required>
                                 </div>
                             </div>
                             {% endif %}
@@ -202,6 +205,7 @@
 
                                             <p><i class="fas fa-bug"></i> {{ discuss.category.name }}</p>
                                             <p><i class="far fa-comments"></i> {{ discuss.discussions_comments_count }}</p>
+                                            <p> <i class="far fa-clock"></i> {{ discuss.created_at|naturaltime }}</p>
                                         </div>
                                     </a>
                                 </div>
@@ -215,45 +219,48 @@
                         <!-- end lists -->
 
                     </div>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center my-5">
-                            {% if discussions.has_previous %}
-                            <li class="page-item">
-                                <a class="page-link border border-dark text-dark rounded mx-1" href="?page={{ discussions.previous_page_number }}{% if current_filter %}&filter={{ current_filter }}{% endif %}">
-                                    Previous
-                                </a>
-                            </li>
-                            {% else %}
-                            <li class="page-item disabled">
-                                <a class="page-link border border-dark text-dark rounded  mx-1" tabindex="-1">Previous</a>
-                            </li>
-                            {% endif %}
+                    
+                {% if discussions.paginator.count > 7 %}
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center my-5">
+                        {% if discussions.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link border border-dark text-dark rounded mx-1" href="?page={{ discussions.previous_page_number }}{% if current_filter %}&filter={{ current_filter }}{% endif %}">
+                                Previous
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link border border-dark text-dark rounded mx-1" tabindex="-1">Previous</a>
+                        </li>
+                        {% endif %}
 
-                            {% for num in discussions.paginator.page_range %}
-                                {% if discussions.number == num %}
-                                    <li class="page-item active" aria-current="page">
-                                        <a class="page-link bg-dark border border-dark text-white rounded mx-1" href="#">{{ num }}</a>
-                                    </li>
-                                {% elif num > discussions.number|add:'-3' and num < discussions.number|add:'3' %}
-                                    <li class="page-item">
-                                        <a class="page-link border border-dark text-dark rounded mx-1" href="?page={{ num }}{% if current_filter %}&filter={{ current_filter }}{% endif %}">{{ num }}</a>
-                                    </li>
-                                {% endif %}
-                            {% endfor %}
-
-                            {% if discussions.has_next %}
-                            <li class="page-item">
-                                <a class="page-link border border-dark text-dark rounded mx-1" href="?page={{ discussions.next_page_number }}{% if current_filter %}&filter={{ current_filter }}{% endif %}">
-                                    Next
-                                </a>
-                            </li>
-                            {% else %}
-                            <li class="page-item disabled">
-                                <a class="page-link border border-dark text-dark rounded mx-1" tabindex="-1">Next</a>
-                            </li>
+                        {% for num in discussions.paginator.page_range %}
+                            {% if discussions.number == num %}
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link bg-dark border border-dark text-white rounded mx-1" href="#">{{ num }}</a>
+                                </li>
+                            {% elif num > discussions.number|add:'-3' and num < discussions.number|add:'3' %}
+                                <li class="page-item">
+                                    <a class="page-link border border-dark text-dark rounded mx-1" href="?page={{ num }}{% if current_filter %}&filter={{ current_filter }}{% endif %}">{{ num }}</a>
+                                </li>
                             {% endif %}
-                        </ul>
-                    </nav>
+                        {% endfor %}
+
+                        {% if discussions.has_next %}
+                        <li class="page-item">
+                            <a class="page-link border border-dark text-dark rounded mx-1" href="?page={{ discussions.next_page_number }}{% if current_filter %}&filter={{ current_filter }}{% endif %}">
+                                Next
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link border border-dark text-dark rounded mx-1" tabindex="-1">Next</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
 
                 </div>
             </div>

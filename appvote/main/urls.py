@@ -9,4 +9,5 @@ urlpatterns = [
     path('toggle-vote/<int:discussion_id>/', views.toggle_vote, name='toggle_vote'),
     path('discussion/<int:discussion_id>/', views.discussion_detail, name='discussion_detail'),
     path('category/<slug:slug>/', views.category_filter, name='category_filter'),
+    path('roadmap/', views.roadmap, name='roadmap'),
 ]
