@@ -25,8 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'your-dev-secret-key')
 if DEBUG:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 else:
-    ALLOWED_HOSTS = [os.environ.get('RAILWAY_HOST', 'appvote.up.railway.app')]
-    # yoki xavfsiz test uchun ['*']
+    ALLOWED_HOSTS = ['appvote.up.railway.app']
 
 # Application definition
 
