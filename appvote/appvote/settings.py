@@ -15,13 +15,13 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Debug rejimini avtomatik sozlash (default: True)
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+# Debug rejimi
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-# Secret key — productionda Railway dagi env dan olinadi
+# Railway secret key yoki lokal
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-dev-secret-key')
 
-# ALLOWED_HOSTS sozlamasi — railway va local uchun farq qiladi
+# ALLOWED_HOSTS
 if DEBUG:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 else:
