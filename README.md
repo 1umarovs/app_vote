@@ -84,13 +84,13 @@ python manage.py runserver
 
 
 ### 🏠 Home Page
-![Home Screenshot](staticfiles/image/home.png)
+![Home Screenshot](appvote/staticfiles/image/home.png)
 
 ### 🔐 Login Page
-![Login Screenshot](staticfiles/image/login.png)
+![Login Screenshot](appvote/staticfiles/image/login.png)
 
 ### 🗺️ Roadmap Page
-![Roadmap Screenshot](staticfiles/image/roadmap.png)
+![Roadmap Screenshot](appvote/staticfiles/image/roadmap.png)
 
 ---
 
