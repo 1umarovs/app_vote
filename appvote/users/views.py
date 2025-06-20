@@ -16,10 +16,6 @@ def signup(request):
                 return render(request, 'registration/register.html', {
                     'error': 'Bu username allaqachon band.'
                 })
-            if User.objects.filter(email=email).exists():
-                return render(request, 'registration/register.html', {
-                    'error': 'Bu email bilan foydalanuvchi mavjud.'
-                })
             if password1 != password2:
                 return render(request, 'registration/register.html', {
                     'error': 'Parollar bir xil emas.'
