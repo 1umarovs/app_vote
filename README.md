@@ -83,9 +83,11 @@ python manage.py runserver
 > - Roadmap page
 
 
-![home Screenshot](./staticfiles/image/home.png)
-![home Screenshot](./staticfiles/image/login.png)
-![home Screenshot](./staticfiles/image/roadmap.png)
+![home Screenshot](.appvote/staticfiles/image/home.png)
+
+![home Screenshot](.appvote/staticfiles/image/login.png)
+
+![home Screenshot](.appvote/staticfiles/image/roadmap.png)
 
 
 
