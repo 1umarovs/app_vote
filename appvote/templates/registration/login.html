@@ -1,4 +1,13 @@
 {% load static %}
+<head>
+  <title>Login - Blogimizga qo'shiling</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blogimizga qo'shiling - Foydalanuvchi uchun a'zo bo'ling" />
+  <meta name="keywords" content="blog, registration, login, user, signup" />
+  <meta name="author" content="Muhammadyusuf" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
 <link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
   rel="stylesheet"
@@ -8,6 +17,10 @@
   href="{% static 'image/logo.jpg' %}"
   type="image/x-icon"
 />
+
+</head>
+
+<body>
 
 <section class="register">
   <div class="form-container cards mx-auto">
@@ -48,9 +61,6 @@
     margin: 0;
     background-color: #f9fafb;
     font-family: Inter var, sans-serif;
-  }
-
-  .register {
     width: 100%;
     display: flex;
     align-items: center;
@@ -61,7 +71,7 @@
 
   .cards {
     width: 100%;
-    max-width: 520px;
+    max-width: 400px!important;
     background-color: #fff;
     padding: 2rem 1.5rem;
     border-radius: 0.75rem;
@@ -92,12 +102,6 @@
     text-decoration: underline;
   }
 
-  @media only screen and (max-width: 767px) {
-    .cards {
-      margin: 0 0;
-      padding: 1.5rem 1rem;
-      box-shadow: none;
-      max-width: 720px;
-    }
-  }
 </style>
+
+</body>

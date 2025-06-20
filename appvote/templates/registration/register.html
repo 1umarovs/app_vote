@@ -1,4 +1,13 @@
 {% load static %}
+<head >
+  <title>Signup - Blogimizga qo'shiling</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blogimizga qo'shiling - Foydalanuvchi uchun a'zo bo'ling" />
+  <meta name="keywords" content="blog, registration, user, signup" />
+  <meta name="author" content="Muhammadyusuf" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
 <link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
   rel="stylesheet"
@@ -9,7 +18,70 @@
   type="image/x-icon"
 />
 
-<section class="register">
+
+<style>
+
+  .register {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1rem;
+    margin: 0;
+    background-color: #f9fafb;
+    font-family: Inter var, sans-serif;
+    
+  }
+
+  .cards {
+    width: 100%;
+    max-width: 520px;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .form-container img {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .form-container small {
+    color: #6c757d;
+  }
+
+  .text-link {
+    color: #198754 !important;
+    text-decoration: none;
+  }
+
+  .text-link:hover {
+    text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 991px) {
+      .register{
+        margin-bottom: 200px;
+      }
+  }
+
+
+</style>
+
+
+
+</head>
+
+
+<body class="register">
 <div class="form-container cards mx-auto">
   <div class="head text-center">
     <img src="{% static 'image/logo.jpg' %}" class="img-fluid" alt="Icon" />
@@ -52,67 +124,9 @@
   </form>
 
   <small class="d-block mt-3 text-center">
-    Avvaldan profil mavjudmi? <a href="#" class="text-link">Kirish</a>
+    Avvaldan profil mavjudmi? <a href="{% url 'users:login' %}" class="text-link">Kirish</a>
   </small>
 </div>
 
-</section>
+</body>
 
-<style>
-  body {
-    margin: 0;
-    background-color: #f9fafb;
-    font-family: Inter var, sans-serif;
-  }
-
-  .register {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 1rem;
-  }
-
-  .cards {
-    width: 100%;
-    max-width: 520px;
-    background-color: #fff;
-    padding: 2rem 1.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
-                0 1px 2px rgba(0, 0, 0, 0.06);
-  }
-
-  .form-container img {
-    width: 50px;
-    margin-bottom: 10px;
-  }
-
-  .form-container h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-
-  .form-container small {
-    color: #6c757d;
-  }
-
-  .text-link {
-    color: #198754 !important;
-    text-decoration: none;
-  }
-
-  .text-link:hover {
-    text-decoration: underline;
-  }
-
-  @media only screen and (max-width: 767px) {
-    .cards {
-      margin: 0 0;
-      padding: 1.5rem 1rem;
-      box-shadow: none;
-      max-width: 720px;
-    }
-  }
-</style>
