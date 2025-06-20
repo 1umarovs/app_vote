@@ -82,11 +82,12 @@ python manage.py runserver
 > - Discussion detail page
 > - Roadmap page
 
-```
-📸 staticfiles/image/home.png  
-📸 staticfiles/image/login.png  
-📸 staticfiles/image/roadmap.png
-```
+
+![home Screenshot](./staticfiles/image/home.png)
+![home Screenshot](./staticfiles/image/login.png)
+![home Screenshot](./staticfiles/image/roadmap.png)
+
+
 
 ---
 
