@@ -115,7 +115,7 @@ USE_I18N = True
 USE_TZ = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://yourapp.up.railway.app"
+    "https://appvote.up.railway.app"
 ]
 
 # Static files (CSS, JavaScript, Images)
